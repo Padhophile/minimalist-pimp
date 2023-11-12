@@ -1,0 +1,106 @@
+:root{
+	--primary: #000000;
+	--secondary: #fbcc9d;
+	--tertiary: #19181b;
+	--tertiary-light: #211f23;
+	--accent: #bd854c;
+	--thin-tab-width: 30px;
+	--wide-tab-width: 256px;
+/* 	--lwt-brighttext-url-color: #cd7420 !important; */
+	--lwt-brighttext-url-color: #cf9155 !important;	
+	--link-color: var(--accent ) !important;
+}
+#nav-bar{
+	background: linear-gradient(to right, black, var(--tertiary)) !important;
+}
+#urlbar[breakout]{
+	--urlbar-height: 34px !important;
+  top: 0 !important;
+}
+#urlbar-background{
+	border-top: none !important;
+	transition: ease-in-out 2000ms !important;
+	outline: none!important;
+	background-image: linear-gradient(to right, var(--primary), var(--tertiary)10%) !important;
+}
+#urlbar:focus-within> #urlbar-background{
+/* 	transition: ease-in-out 2000ms !important; */
+  border: 1px ridge var(--tertiary-light) !important;
+	border-top: none !important;
+	background: linear-gradient(to right, var(--tertiary), var(--tertiary-light)) !important;
+}
+.urlbarView-row[selected]{
+	background: linear-gradient(to right,var(--secondary), var(--accent)) !important;
+	color: black !important;;
+}
+.urlbarView-row[row-selectable]:not([selected]):hover{
+	background: var(--tertiary-light) !important;
+	color: white !important;
+}
+.urlbarView-row[row-selectable]:not([selected]):hover .urlbarView-url{
+	color:  var(--secondary) !important;
+}
+toolbarbutton{
+	--toolbarbutton-hover-background: var(--tertiary-light) !important;
+}
+
+#star-button{
+	fill: var(--secondary) !important;
+}
+.urlbarView-type-icon{
+	fill: var(--secondary) !important;
+}
+/* Hide main tabs toolbar */
+#TabsToolbar {
+	display: none !important;
+}
+#titlebar{
+	display: none !important;
+}
+/* Sidebar min and max width removal */
+
+/* Hide splitter, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+	display: none !important;
+}
+/* Hide sidebar header, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+	visibility: collapse;
+}
+
+/* Shrink sidebar until hovered, when using Tree Style Tab. */
+ #sidebar-box{
+	position: relative !important;
+	width: var(--thin-tab-width) !important;
+	transition: ease-in 150ms !important;
+	min-width: var(--thin-tab-width) !important;
+	max-width: none !important;
+	z-index: 1 !important;
+}
+ #sidebar-box:hover{
+	width: var(--wide-tab-width) !important;
+	margin-right: -226px !important; /*--thin-tab-width minus --wide-tab-width*/
+	transition: ease-in-out 250ms !important;
+}
+panelview{
+	transition: ease-in-out 200ms !important;
+	background: linear-gradient(to right, var(--tertiary), var(--tertiary-light)) !important;
+}
+.panel-header{
+	background: linear-gradient(to right, var(--tertiary), var(--tertiary-light)) !important;
+}
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton):not([disabled]):hover {
+  background: linear-gradient(to right, var(--secondary)-40%, var(--accent)30%)!important;
+	color: black !important;
+}
+arrowscrollbox{
+	background: var(--primary) !important;
+}
+menuitem:hover{
+/* 	background: var(--accent) !important; */
+	background: linear-gradient(to right, var(--secondary)-40%, var(--accent)30%)!important;
+	color: black !important;
+}
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"] > .menu-iconic-left > .menu-iconic-icon {
+  background-color: var(--accent) !important;
+}

@@ -1,0 +1,7 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  body {
+	background-image: linear-gradient(to left, #19181b 0%, black 100%);
+	background-size: contain;
+ }
+
+}

@@ -1,0 +1,7 @@
+body{
+	background-image: linear-gradient(to left, #19181b 0%, black 100%);
+	background-size: contain;
+}
+h1{
+	color: white;
+}
